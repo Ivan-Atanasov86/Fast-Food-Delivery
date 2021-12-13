@@ -22,6 +22,6 @@ public class Restaurant {
 
     @NotNull
     @Column(nullable = false,unique = true)
-    private String name;
+    private String restaurantName;
 
 }

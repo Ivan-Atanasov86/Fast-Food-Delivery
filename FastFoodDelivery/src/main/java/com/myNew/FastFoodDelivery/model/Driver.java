@@ -21,5 +21,5 @@ public class Driver {
 
     @NotNull
     @Column(nullable = false,unique = true)
-    private String fullName;
+    private String driverName;
 }

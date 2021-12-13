@@ -21,5 +21,5 @@ public class Food {
 
         @NotNull
         @Column(nullable = false,unique = true)
-        private String name;
+        private String foodName;
 }
