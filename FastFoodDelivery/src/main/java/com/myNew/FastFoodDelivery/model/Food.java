@@ -7,22 +7,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "products")
+@Table(name = "foods")
 @Builder
 @Getter
-public class Product {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    private Long id;
+public class Food {
 
-    @NotNull
-    @Column(nullable = false,unique = true)
-    private String name;
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Id
+        private Long id;
 
-
-
+        @NotNull
+        @Column(nullable = false,unique = true)
+        private String name;
 }
