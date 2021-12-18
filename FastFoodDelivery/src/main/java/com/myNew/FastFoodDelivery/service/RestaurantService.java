@@ -20,6 +20,8 @@ public interface RestaurantService {
 
     Set<Restaurant> findAll() ;
 
+    Restaurant findByLocation(String location);
+
 
 
 }

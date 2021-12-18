@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 @Builder
-public class RestaurantDto {
 
-    private String location;
+public class FoodDto {
+
+
 }

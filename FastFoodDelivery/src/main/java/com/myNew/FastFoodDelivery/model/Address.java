@@ -23,4 +23,7 @@ public class Address {
     @NotNull
     @Column(nullable = false,unique = true)
     private String fullAddress;
+
+    @Column(nullable = false)
+    private String paymentMethod;
 }

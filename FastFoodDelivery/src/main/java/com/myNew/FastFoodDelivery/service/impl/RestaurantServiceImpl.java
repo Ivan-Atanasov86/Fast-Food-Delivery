@@ -28,6 +28,13 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
+    public Restaurant findByLocation(String location) {
+        return restaurantRepository.findByLocation(location)
+                .orElseThrow(() -> new ThisDataIsNotFoundException
+                        (String.format("Restaurant witn location %s doesn`t exists!", location)));
+    }
+
+    @Override
     public Restaurant save(Restaurant restaurant) {
         try {
             return restaurantRepository.save(restaurant);

@@ -11,4 +11,5 @@ public interface DriverRepository extends JpaRepository<Driver,Long> {
 
 
      Optional<Driver> findByDriverName(String driverName);
+     Optional<Driver> findByEfficiencyLevel(double efficiencylevel);
 }

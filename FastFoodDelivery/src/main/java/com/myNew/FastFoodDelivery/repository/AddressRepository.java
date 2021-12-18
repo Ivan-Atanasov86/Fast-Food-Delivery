@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface AddressRepository extends JpaRepository<Address,Long> {
 
     Optional<Address> findByFullAddress(String fullAddress);
+    Optional<Address> findByPaymentMethod(String paymentMethod);
 }

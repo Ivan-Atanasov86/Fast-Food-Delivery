@@ -22,4 +22,7 @@ public class Driver {
     @NotNull
     @Column(nullable = false,unique = true)
     private String driverName;
+
+    @Column(nullable = false)
+    private double efficiencyLevel;
 }

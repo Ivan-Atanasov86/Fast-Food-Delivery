@@ -24,4 +24,7 @@ public class Restaurant {
     @Column(nullable = false,unique = true)
     private String restaurantName;
 
+    @NotNull
+    private String location;
+
 }

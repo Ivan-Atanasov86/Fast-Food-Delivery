@@ -11,4 +11,5 @@ public interface FoodRepository extends JpaRepository<Food,Long> {
 
 
     Optional<Food> findByFoodName(String foodName);
+    Optional<Food> findByRating (String foodRating);
 }

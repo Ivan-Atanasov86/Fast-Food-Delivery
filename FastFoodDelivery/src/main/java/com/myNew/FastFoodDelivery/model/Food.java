@@ -22,4 +22,8 @@ public class Food {
         @NotNull
         @Column(nullable = false,unique = true)
         private String foodName;
+
+        @NotNull
+        @Column(nullable = false)
+        private String foodRating;
 }
