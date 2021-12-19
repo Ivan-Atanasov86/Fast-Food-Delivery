@@ -3,7 +3,6 @@ package com.myNew.FastFoodDelivery.service.impl;
 import com.myNew.FastFoodDelivery.exception.DublicateResourceException;
 import com.myNew.FastFoodDelivery.exception.ThisDataIsNotFoundException;
 import com.myNew.FastFoodDelivery.model.Driver;
-import com.myNew.FastFoodDelivery.model.Restaurant;
 import com.myNew.FastFoodDelivery.repository.DriverRepository;
 import com.myNew.FastFoodDelivery.service.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;

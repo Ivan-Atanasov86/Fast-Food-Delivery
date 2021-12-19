@@ -11,5 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class RestaurantDto {
 
-    private String location;
+   private Long id;
+
+    private String restaurantName;
 }

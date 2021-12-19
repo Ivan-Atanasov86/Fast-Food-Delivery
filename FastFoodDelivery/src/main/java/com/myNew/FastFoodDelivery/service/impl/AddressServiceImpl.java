@@ -3,7 +3,6 @@ package com.myNew.FastFoodDelivery.service.impl;
 import com.myNew.FastFoodDelivery.exception.DublicateResourceException;
 import com.myNew.FastFoodDelivery.exception.ThisDataIsNotFoundException;
 import com.myNew.FastFoodDelivery.model.Address;
-import com.myNew.FastFoodDelivery.model.Food;
 import com.myNew.FastFoodDelivery.repository.AddressRepository;
 import com.myNew.FastFoodDelivery.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +49,7 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public void delete(Long id) {
-    addressRepository.deleteById(id);
+        addressRepository.deleteById(id);
     }
 
     @Override
@@ -73,5 +72,5 @@ public class AddressServiceImpl implements AddressService {
             throw new DublicateResourceException
                     (String.format("Address with name %d already exists!", address.getFullAddress()));
         }
-}
     }
+}

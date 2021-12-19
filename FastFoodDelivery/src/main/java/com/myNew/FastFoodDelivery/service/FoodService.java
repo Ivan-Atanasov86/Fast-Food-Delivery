@@ -1,7 +1,6 @@
 package com.myNew.FastFoodDelivery.service;
 
 import com.myNew.FastFoodDelivery.model.Food;
-import com.myNew.FastFoodDelivery.model.Restaurant;
 
 import java.util.Set;
 
@@ -19,5 +18,5 @@ public interface FoodService {
 
     Set<Food> findAll() ;
 
-    Food findByRating (String foodRating);
+    Food findByFoodRating(String foodRating);
 }

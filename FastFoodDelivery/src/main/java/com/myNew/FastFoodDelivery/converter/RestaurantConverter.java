@@ -4,14 +4,12 @@ import com.myNew.FastFoodDelivery.dto.RestaurantDto;
 import com.myNew.FastFoodDelivery.model.Restaurant;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-
 @Component
 public class RestaurantConverter {
 
     public RestaurantDto toRestaurantDto(Restaurant restaurant) {
         return RestaurantDto.builder()
-                .RestaurantName(restaurant.getRestaurantName())
+                .restaurantName(restaurant.getRestaurantName().toString())
                 .build();
     }
 

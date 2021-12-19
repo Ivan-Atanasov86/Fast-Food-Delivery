@@ -22,6 +22,17 @@ public class FoodServiceImpl implements FoodService {
         this.foodRepository = foodRepository;
     }
 
+
+    @Override
+    public Food save(Food food) {
+        try {
+            return foodRepository.save(food);
+        } catch (DataIntegrityViolationException exception) {
+            throw new DublicateResourceException
+                    (String.format("Food with name %d already exists!", food.getFoodName()));
+        }
+    }
+
     @Override
     public Food findByFoodName(String foodName) {
         return foodRepository.findByFoodName(foodName)
@@ -57,21 +68,14 @@ public class FoodServiceImpl implements FoodService {
         return new HashSet<>(foodRepository.findAll());
     }
 
-    @Override
-    public Food findByRating(String foodRating) {
 
-        return foodRepository.findByRating(foodRating)
-                .orElseThrow(() -> new ThisDataIsNotFoundException
-                        (String.format("Food witn rating %s doesn`t exists!", foodRating)));
-    }
-
-    @Override
-    public Food save(Food food) {
-        try {
-            return foodRepository.save(food);
-        } catch (DataIntegrityViolationException exception) {
-            throw new DublicateResourceException
-                    (String.format("Food with name %d already exists!", food.getFoodName()));
+        @Override
+        public Food findByFoodRating(String foodRating) {
+            return foodRepository.findByFoodName(foodRating)
+                    .orElseThrow(() -> new ThisDataIsNotFoundException
+                            (String.format("Food witn rating %s doesn`t exists!", foodRating)));
         }
     }
-}
+
+
+

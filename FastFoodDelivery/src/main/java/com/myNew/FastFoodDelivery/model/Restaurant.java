@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,5 +27,10 @@ public class Restaurant {
 
     @NotNull
     private String location;
+
+    @ManyToMany
+    @JoinTable
+    private Set<Restaurant> restaurants;
+
 
 }

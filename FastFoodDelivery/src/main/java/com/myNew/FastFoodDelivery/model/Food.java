@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -26,4 +28,7 @@ public class Food {
         @NotNull
         @Column(nullable = false)
         private String foodRating;
+
+        @ManyToMany(mappedBy = "foods")
+        private Set<Restaurant> restaurants;
 }

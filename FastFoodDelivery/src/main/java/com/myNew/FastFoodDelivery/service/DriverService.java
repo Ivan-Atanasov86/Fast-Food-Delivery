@@ -1,7 +1,6 @@
 package com.myNew.FastFoodDelivery.service;
 
 import com.myNew.FastFoodDelivery.model.Driver;
-import com.myNew.FastFoodDelivery.model.Restaurant;
 
 import java.util.Set;
 

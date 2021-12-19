@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface FoodRepository extends JpaRepository<Food,Long> {
 
+    Optional<Food> findByFoodName (String foodName);
 
-    Optional<Food> findByFoodName(String foodName);
-    Optional<Food> findByRating (String foodRating);
+    Optional<Food> findByFoodRating(String foodRating);
 }

@@ -2,8 +2,6 @@ package com.myNew.FastFoodDelivery.service;
 
 import com.myNew.FastFoodDelivery.model.Restaurant;
 
-import javax.validation.constraints.Max;
-import java.util.List;
 import java.util.Set;
 
 public interface RestaurantService {
